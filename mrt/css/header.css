@@ -613,6 +613,10 @@ body {
   background-color: #414255;
 }
 
+a.button-dark {
+  color: #fff;
+}
+
 .offer {
   position: relative;
 }
