@@ -680,15 +680,35 @@ a.button-dark {
   font-weight: 700;
 }
 
+@media (max-width: 1367px) {
+  .offer {
+    background-position: bottom center;
+    background-size: 160%;
+    background-repeat: no-repeat;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+
+  .offer {
+    background-position: bottom center;
+    background-size: 210%;
+    background-repeat: no-repeat;
   }
 }
 
 @media (max-width: 992px) {
   .container {
     max-width: 740px;
+  }
+
+  .offer {
+    background-position: bottom center;
+    background-size: 200%;
+    background-repeat: no-repeat;
   }
 
   body {
@@ -777,6 +797,14 @@ a.button-dark {
 @media (max-width: 768px) {
   .container {
     max-width: 540px;
+  }
+}
+
+@media (max-width: 578px) {
+  .offer {
+    background-position: bottom center;
+    background-size: 300%;
+    background-repeat: no-repeat;
   }
 }
 
