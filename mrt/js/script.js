@@ -74,11 +74,11 @@ jQuery(document).ready(function ($) {
 			{
 				breakpoint: 1200,
 				settings: {
-					slidesToShow: 1
+					slidesToShow: 2
 				}
 			},
 			{
-				breakpoint: 578,
+				breakpoint: 992,
 				settings: {
 					slidesToShow: 1,
 				}
@@ -170,5 +170,18 @@ jQuery(document).ready(function ($) {
 			$('.header').slideDown(200);
 		});
 	}
+
+	$('.q-wrap-left-item-title').on('click', function() {
+		if ($(this).parent().hasClass('q-active')) {
+			$('.q-wrap-left-item-title').parent().removeClass('q-active');
+			$('.q-wrap-left-item-title').next().slideUp(200);
+		} else {
+			$('.q-wrap-left-item-title').parent().removeClass('q-active');
+			$('.q-wrap-left-item-title').next().slideUp(200);
+			$(this).parent().addClass('q-active');
+			$(this).next().slideDown(200);
+		}
+		
+	});
 
 }); //end
