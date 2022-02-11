@@ -23,11 +23,25 @@ jQuery(document).ready(function ($) {
 	$('.call-sign').on('click', function() {
 		$('.popup-singup').fadeIn(300);
 	});
+	$('.call-sign-single').on('click', function() {
+		$('.popup-singup-price').fadeIn(300);
+	});
 	$('.call-callback').on('click', function() {
 		$('.popup-callback').fadeIn(300);
 	});
 	$('.call-feed').on('click', function() {
 		$('.popup-feedback').fadeIn(300);
+	});
+	$('.news-moar').on('click', function() {
+		$('.news-wrap-item').fadeIn(200);
+		$(this).fadeOut(200);
+	});
+	$('.ready-mrt').on('click', function() {
+		$('.trigger-mrt').fadeIn(300);
+
+	});
+	$('.ready-no').on('click', function() {
+		$('.trigger-no').fadeIn(300);
 	});
 
 	$(window).scroll(function() { 
@@ -45,6 +59,29 @@ jQuery(document).ready(function ($) {
 		infinite: false,
 		speed: 300,
 		slidesToShow: 2,
+		slidesToScroll: 1,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+			{
+				breakpoint: 578,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
+	 $('.device-wrap').slick({
+		dots: false,
+		arrows: false,
+		infinite: false,
+		speed: 300,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		adaptiveHeight: true,
 		responsive: [
@@ -183,5 +220,10 @@ jQuery(document).ready(function ($) {
 		}
 		
 	});
+
+	$('.single-serv-wrap-table-title').on('click', function() {
+		$(this).next().slideToggle(200);
+		$(this).toggleClass('single-serv-wrap-table-title-active')
+	})
 
 }); //end
